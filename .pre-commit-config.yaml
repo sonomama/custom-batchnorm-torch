@@ -14,7 +14,7 @@ repos:
       - id: pytest-check
         types: [python]
         name: pytest
-        entry: pytest tests
+        entry: ./test.sh
         language: python
         pass_filenames: false
         always_run: true
