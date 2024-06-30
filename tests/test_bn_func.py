@@ -1,7 +1,4 @@
 import torch
-import sys
-
-sys.path.append("..")
 from src.batchnorm_func import CustomBatchNormFunc
 
 

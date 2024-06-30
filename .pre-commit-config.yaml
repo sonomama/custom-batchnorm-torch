@@ -13,8 +13,8 @@ repos:
       hooks:
       - id: pytest-check
         types: [python]
-        name: pytest-check
+        name: pytest
         entry: pytest tests
-        language: system
+        language: python
         pass_filenames: false
         always_run: true
