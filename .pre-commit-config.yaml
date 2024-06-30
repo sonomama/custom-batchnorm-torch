@@ -14,7 +14,7 @@ repos:
       - id: pytest-check
         types: [python]
         name: pytest
-        entry: bash -c "chmod +x test.sh; ./test.sh"
+        entry: pytest tests
         language: python
         pass_filenames: false
         always_run: true
