@@ -1,11 +1,22 @@
 import torch
 import sys
+
 sys.path.append("..")
 from src.batchnorm_func import CustomBatchNormFunc
 
 
 def test_bn_backprop_works_as_pytorch():
-    x = torch.tensor([[10.111, -3.15, 5.365], [-100.982, 1.456, 93.019], [2.543, 8.582, 15.675], [1.354, 8.23, 4.22], [1.04, -6.365, 15.291]], requires_grad=True, dtype=torch.float32)
+    x = torch.tensor(
+        [
+            [10.111, -3.15, 5.365],
+            [-100.982, 1.456, 93.019],
+            [2.543, 8.582, 15.675],
+            [1.354, 8.23, 4.22],
+            [1.04, -6.365, 15.291],
+        ],
+        requires_grad=True,
+        dtype=torch.float32,
+    )
     gamma = torch.tensor([1.0, 1.0, 1.0], requires_grad=True, dtype=torch.float32)
     beta = torch.tensor([0.0, 0.0, 0.0], requires_grad=True, dtype=torch.float32)
     loss_fn = lambda t: torch.sum(t.abs())
